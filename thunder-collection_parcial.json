@@ -1,21 +1,21 @@
 {
     "clientName": "Thunder Client",
-    "collectionName": "parcial",
-    "collectionId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
-    "dateExported": "2025-04-09T05:20:49.928Z",
+    "collectionName": "Parcial 2",
+    "collectionId": "7ef34e24-a9ab-4464-9ef9-69d4af7ca508",
+    "dateExported": "2025-04-09T22:07:57.567Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "b20f8682-a7bc-40fc-b9b1-e1868117bad3",
-            "colId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+            "_id": "1a48a1ff-9b1a-41a4-ba63-c4b6a7cc2a47",
+            "colId": "7ef34e24-a9ab-4464-9ef9-69d4af7ca508",
             "containerId": "",
             "name": "POST",
             "url": "",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2025-04-09T04:07:06.087Z",
-            "modified": "2025-04-09T04:37:07.473Z",
+            "created": "2025-04-09T22:02:36.090Z",
+            "modified": "2025-04-09T22:05:52.523Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -24,44 +24,44 @@
             }
         },
         {
-            "_id": "6ce42820-7aaa-49c1-92ec-746b64cb9a4a",
-            "colId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+            "_id": "479d2b74-f6b9-47c9-8957-f756ae0de5b0",
+            "colId": "7ef34e24-a9ab-4464-9ef9-69d4af7ca508",
             "containerId": "",
             "name": "GET",
             "url": "",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2025-04-09T05:17:37.971Z",
-            "modified": "2025-04-09T05:17:37.972Z",
+            "created": "2025-04-09T22:06:08.120Z",
+            "modified": "2025-04-09T22:06:08.120Z",
             "headers": []
         },
         {
-            "_id": "25825e1c-d146-4dc5-8994-6cf60db73f0a",
-            "colId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+            "_id": "2e861f40-054f-4dd3-9816-9901c758c2fa",
+            "colId": "7ef34e24-a9ab-4464-9ef9-69d4af7ca508",
             "containerId": "",
             "name": "PUT",
-            "url": "/67f602eae179b424f1c212a2",
+            "url": "/67f6ef40614f835b8a0f9692",
             "method": "PUT",
             "sortNum": 30000,
-            "created": "2025-04-09T05:17:51.910Z",
-            "modified": "2025-04-09T05:19:04.084Z",
+            "created": "2025-04-09T22:06:27.881Z",
+            "modified": "2025-04-09T22:07:05.103Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"titulo\": \"Meditaciones de marco Aurelio\",\n  \"autor\": \"Marco Aurelio\",\n  \"editorial\": \"editorial super\",\n  \"AnioPublicacion\": 2010,\n  \"Disponible\": false\n}",
+                "raw": "{\n  \"titulo\": \"Meditaciones de marco Aurelio Cheverony\",\n  \"autor\": \"Marco Aurelio\",\n  \"editorial\": \"editora\",\n  \"AnioPublicacion\": 2000,\n  \"Disponible\": true\n}",
                 "form": []
             }
         },
         {
-            "_id": "1751d54d-cd42-4ba8-a067-d8ec6065f36b",
-            "colId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+            "_id": "c57ea1c1-9a62-4578-a994-f5cb661df72f",
+            "colId": "7ef34e24-a9ab-4464-9ef9-69d4af7ca508",
             "containerId": "",
             "name": "DELETE",
-            "url": "/67f602eae179b424f1c212a2",
+            "url": "/67f6ef40614f835b8a0f9692",
             "method": "DELETE",
             "sortNum": 40000,
-            "created": "2025-04-09T05:19:16.201Z",
-            "modified": "2025-04-09T05:19:26.227Z",
+            "created": "2025-04-09T22:07:19.043Z",
+            "modified": "2025-04-09T22:07:33.602Z",
             "headers": []
         }
     ],
@@ -70,5 +70,5 @@
             "baseUrl": "http://localhost:8080/libros"
         }
     },
-    "ref": "enoliI3pqNMJTsxjLNpjM1iC5eXenlKJYpJE-v5qZGHdiI8g7eIRHnWIcwPK86Mz5GXzoUvM18X6EeZc3akXZw"
+    "ref": "z5eemcdTWjZhnLwT67YDkSrOsb8r-lOHL0oP6koXOtoESWyIfOq3LOCKj4MV2J9ZB6aV_5mE70WwGNs2RBRv_A"
 }

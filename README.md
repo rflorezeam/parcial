@@ -104,7 +104,7 @@ go test -coverprofile=coverage.out ./...
 Se genera backup dentro del contenedor Mongo con:
 
 ```powershell
-docker exec -t mongo mongodump --archive="/data/db/backup-$(Get-Date -Format yyyy-MM-dd).gz" --gzip --db=tareasdb
+docker exec -t mongo mongodump --archive="/data/db/backup-$(Get-Date -Format yyyy-MM-dd).gz" --gzip --db=librosdb
 docker cp mongo:/data/db/backup-2025-04-04.gz ./backup-2025-04-04.gz
 ```
 
