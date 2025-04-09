@@ -108,7 +108,7 @@ docker exec -t mongo mongodump --archive="/data/db/backup-$(Get-Date -Format yyy
 docker cp mongo:/data/db/backup-2025-04-04.gz ./backup-2025-04-04.gz
 ```
 
-
+---
 
 ## 🎯 Entregables
 
@@ -118,6 +118,7 @@ docker cp mongo:/data/db/backup-2025-04-04.gz ./backup-2025-04-04.gz
 - Colección Thunder Client exportada
 - Pruebas unitarias y cobertura
 - Backup generado desde MongoDB
+- Diagrama de infraestructura (`diagrama.png`)
 - BONUS: Script de automatización (`automatizar.ps1`)
 - 🐳 Imagen publicada en Docker Hub: [rflorezeam/parcial](https://hub.docker.com/r/rflorezeam/parcial)
 
