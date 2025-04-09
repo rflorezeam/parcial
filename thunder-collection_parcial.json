@@ -1,0 +1,74 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "parcial",
+    "collectionId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+    "dateExported": "2025-04-09T05:20:49.928Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b20f8682-a7bc-40fc-b9b1-e1868117bad3",
+            "colId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+            "containerId": "",
+            "name": "POST",
+            "url": "",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-04-09T04:07:06.087Z",
+            "modified": "2025-04-09T04:37:07.473Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"Meditaciones de marco Aurelio\",\n  \"autor\": \"Marco Aurelio\",\n  \"editorial\": \"editora\",\n  \"AnioPublicacion\": 2000,\n  \"Disponible\": true\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6ce42820-7aaa-49c1-92ec-746b64cb9a4a",
+            "colId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+            "containerId": "",
+            "name": "GET",
+            "url": "",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-04-09T05:17:37.971Z",
+            "modified": "2025-04-09T05:17:37.972Z",
+            "headers": []
+        },
+        {
+            "_id": "25825e1c-d146-4dc5-8994-6cf60db73f0a",
+            "colId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+            "containerId": "",
+            "name": "PUT",
+            "url": "/67f602eae179b424f1c212a2",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-04-09T05:17:51.910Z",
+            "modified": "2025-04-09T05:19:04.084Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"Meditaciones de marco Aurelio\",\n  \"autor\": \"Marco Aurelio\",\n  \"editorial\": \"editorial super\",\n  \"AnioPublicacion\": 2010,\n  \"Disponible\": false\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1751d54d-cd42-4ba8-a067-d8ec6065f36b",
+            "colId": "7d0ec852-6fca-41f5-bc29-fe948eaa762f",
+            "containerId": "",
+            "name": "DELETE",
+            "url": "/67f602eae179b424f1c212a2",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-04-09T05:19:16.201Z",
+            "modified": "2025-04-09T05:19:26.227Z",
+            "headers": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:8080/libros"
+        }
+    },
+    "ref": "enoliI3pqNMJTsxjLNpjM1iC5eXenlKJYpJE-v5qZGHdiI8g7eIRHnWIcwPK86Mz5GXzoUvM18X6EeZc3akXZw"
+}
