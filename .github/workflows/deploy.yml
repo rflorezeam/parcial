@@ -1,0 +1,25 @@
+name: CI/CD with Compose (self-hosted)
+
+on:
+  push:
+    branches: [ "feature-workflow" ]
+
+jobs:
+  deploy:
+    runs-on: self-hosted  # 👈 Asegúrate que tu runner esté así registrado
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Stop any existing containers
+      run: |
+        docker compose down || true
+
+    - name: Build and start services with Docker Compose
+      run: |
+        docker compose up --build -d
+
+    - name: Check running containers
+      run: |
+        docker ps
