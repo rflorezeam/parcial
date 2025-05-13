@@ -104,8 +104,10 @@ jobs:
 
       - name: Build Docker image for GitHub Packages
         run: |
-          docker build -t ghcr.io/${{ github.actor }}/parcial:latest .
+          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/parcial:latest
+          echo "IMAGE_NAME=$IMAGE_NAME" >> $GITHUB_ENV
+          docker build -t $IMAGE_NAME .
 
       - name: Push Docker image to GitHub Packages
         run: |
-          docker push ghcr.io/${{ github.actor }}/parcial:latest
+            docker push $IMAGE_NAME
