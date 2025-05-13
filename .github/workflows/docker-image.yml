@@ -62,7 +62,7 @@ jobs:
   release:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/feature-workflow'
 
     steps:
       - name: Checkout repo
