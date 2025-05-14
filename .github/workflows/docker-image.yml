@@ -117,11 +117,16 @@ jobs:
           VERSION="v1.00.$((${LAST_TAG##*.} + 1))"
           echo "VERSION=$VERSION" >> $GITHUB_ENV
 
-          # Crear y empujar el nuevo tag
-          git tag $VERSION
-          git push origin $VERSION
+          if git rev-parse "$VERSION" >/dev/null 2>&1; then
+            echo "El tag $VERSION ya existe. Saltando push..."
+            echo "SKIP_PUSH=true" >> $GITHUB_ENV
+          else
+            git tag $VERSION
+            git push origin $VERSION
+          fi
 
       - name: Create GitHub Release
+        if: env.SKIP_PUSH != 'true'
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.VERSION }}
