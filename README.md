@@ -17,12 +17,13 @@ CRUD completo sobre la entidad `Libro`, que incluye:
 
 ## 📦 Tecnologías utilizadas
 
-- Golang
-- MongoDB
+- Golang 1.22
+- MongoDB 6.0
 - Docker y Docker-Compose
 - Thunder Client (Extension de VSCode)
 - Testify para pruebas unitarias
 - Godotenv para manejar entornos
+- GitHub Actions para CI/CD
 
 ---
 
@@ -56,17 +57,42 @@ La app estará disponible en: [http://localhost:8080](http://localhost:8080)
 
 ---
 
-## 🐳 Imagen en Docker Hub
+## 🔄 CI/CD con GitHub Actions
 
-La imagen del microservicio fue construida y publicada en Docker Hub. Puede ser ejecutada en cualquier entorno compatible con Docker:
+El proyecto incluye dos workflows principales:
 
-🔗 **https://hub.docker.com/r/rflorezeam/parcial**
+### 1. Docker Build y Push (docker-image.yml)
+- Construye y prueba la imagen Docker
+- Ejecuta pruebas unitarias
+- Publica la imagen en GitHub Container Registry
+- Crea releases automáticos con tags incrementales
+- Escaneo de vulnerabilidades con Docker Scout
+
+### 2. Despliegue Automatizado (deploy.yml)
+- Se ejecuta en un runner self-hosted
+- Detiene contenedores existentes
+- Construye y despliega servicios con Docker Compose
+- Verifica el estado de los contenedores
+
+---
+
+## 🐳 Imagen en Docker Hub y GitHub Packages
+
+La imagen del microservicio está disponible en:
+
+- Docker Hub: [rflorezeam/parcial](https://hub.docker.com/r/rflorezeam/parcial)
+- GitHub Packages: `ghcr.io/rflorezeam/parcial:latest`
 
 ### Para ejecutarla directamente:
 
 ```bash
+# Desde Docker Hub
 docker pull rflorezeam/parcial
 docker run -p 8080:8080 --env-file .env rflorezeam/parcial
+
+# Desde GitHub Packages
+docker pull ghcr.io/rflorezeam/parcial:latest
+docker run -p 8080:8080 --env-file .env ghcr.io/rflorezeam/parcial:latest
 ```
 
 > Asegúrate de tener un archivo `.env` válido al momento de correr el contenedor.
@@ -81,10 +107,11 @@ docker run -p 8080:8080 --env-file .env rflorezeam/parcial
 go test -cover ./...
 ```
 
-- Cubre servicios: crear, obtener, actualizar y eliminar tareas
+- Cubre servicios: crear, obtener, actualizar y eliminar libros
+- Pruebas de integración con la base de datos
+- Validación de modelos y servicios
 
 📊 Reporte de cobertura generado:
-Archivo: coverage.out  
 ```bash
 go test -coverprofile=coverage.out ./...
 ```
@@ -95,7 +122,7 @@ go test -coverprofile=coverage.out ./...
 
 - Incluye todos los endpoints
 - Validaciones de estado, respuestas y estructura
-- Archivo de colección exportado: `thunder-collection_parcial2.json`
+- Archivo de colección exportado: `thunder-collection_parcial.json`
 
 ---
 
@@ -120,7 +147,10 @@ docker cp mongo:/data/db/backup-2025-04-04.gz ./backup-2025-04-04.gz
 - Backup generado desde MongoDB
 - Diagrama de infraestructura (`diagrama.png`)
 - BONUS: Script de automatización (`automatizar.ps1`)
-- 🐳 Imagen publicada en Docker Hub: [rflorezeam/parcial](https://hub.docker.com/r/rflorezeam/parcial)
+- 🐳 Imágenes publicadas en:
+  - Docker Hub: [rflorezeam/parcial](https://hub.docker.com/r/rflorezeam/parcial)
+  - GitHub Packages: `ghcr.io/rflorezeam/parcial:latest`
+- Workflows de GitHub Actions para CI/CD
 
 ---
 
